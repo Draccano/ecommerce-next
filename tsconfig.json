@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
+    "lib": [  // type defined in the libs
+      "dom",  // they are placed in the node_modules folder typescript - lib folder
       "dom.iterable",
       "esnext"
     ],
@@ -18,12 +18,12 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": [
+  "include": [ // compile all folders and subfolders
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": [
+  "exclude": [ // don't compile node_modules
     "node_modules"
   ]
 }
