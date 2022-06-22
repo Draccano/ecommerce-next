@@ -1,10 +1,14 @@
+import { useEffect } from "react";
+import play from "../playground";
+
+ 
 
 export default function Home() {
 
-  const message: string = "Hello world"
 
-  let person: Person = { name: "Filip" }
-  
+ useEffect(()=> {
+  play();
+ }, [])
 
-  return <div>{message}</div>;
+  return <div>Hello World</div>;
 }
