@@ -9,6 +9,10 @@ interface Person {
 //     age: number
 // }
 
+type PersonLoggerFn = 
+  (name: string, age: number) => string
+
+
 export default function play() {
     const name: string = "Filip";
     const age: number = 30;
@@ -18,11 +22,14 @@ export default function play() {
         age: 34
     }
 
-    function logPersonInfo(personName: string, personAge: number) {
-        const info = "Name: " + personName + ", age: " + personAge
-        console.log(info)
-        return info
-    }
+    const logPersonInfo: PersonLoggerFn = (
+      personName: string,
+      personAge: number
+    ): string => {
+      const info = 'Name: ' + personName + ', age: ' + personAge;
+      console.log(info);
+      return info;
+    };
 
     function logPersonInfo2(person: Person) {
       const info = 'Name: ' + person.name + ', age: ' + person.age;
@@ -32,7 +39,7 @@ export default function play() {
 
 
 
-    logPersonInfo(name, age);
+    const log = logPersonInfo(name, age);
     logPersonInfo2(person);
 
 }
