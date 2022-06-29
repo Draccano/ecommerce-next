@@ -17,21 +17,21 @@ class Person {
 // }
 
 type PersonLoggerFn = 
-  (name: string, age: number) => string
+  (name: string, age?: number) => string
 
 
 export default function play() {
     const name: string = "Filip";
     const age: number = 30;
 
-    // const person: Person = {
-    //     name: "John",
-    //     age: 34
-    // }
+    const person: Person = {
+        name: "John",
+        age: 34
+    }
 
     const logPersonInfo: PersonLoggerFn = (
       personName: string,
-      personAge: number
+      personAge: number = 0
     ): string => {
       const info = 'Name: ' + personName + ', age: ' + personAge;
       console.log(info);
