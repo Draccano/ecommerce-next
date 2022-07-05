@@ -1,9 +1,7 @@
 
 import { Product } from '@common/types/product';
 import { ProductConnection } from "../schema";
-import fetchApi from "../utils/fetch-api";
-import { normalizeProduct } from "../utils/normalize";
-import getAllProductsQuery from "../utils/queries/get-all-products";
+import fetchApi, { getAllProductsQuery, normalizeProduct } from '../utils';
 
 type ReturnType = {
     products: ProductConnection
