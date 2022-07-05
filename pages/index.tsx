@@ -6,7 +6,7 @@ import type { InferGetStaticPropsType } from "next";
 export async function getStaticProps() { // renders in the server, not visible request
   const config = getConfig()
   console.log(config.apiUrl)
-  const products = await getAllProducts();
+  const products = await getAllProducts(config);
 
   return {
     props: {
