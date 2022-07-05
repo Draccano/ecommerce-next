@@ -9,5 +9,5 @@ const nextConfig = withFrameworkConfig({
   reactStrictMode: true,
 });
 
-console.log("next.config.js", JSON.stringify(nextConfig, null, 2))
+// console.log("next.config.js", JSON.stringify(nextConfig, null, 2))
 module.exports = nextConfig

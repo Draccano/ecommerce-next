@@ -2,20 +2,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "target": "es5",
-    "lib": [  // type defined in the libs
-      "dom",  // they are placed in the node_modules folder typescript - lib folder
+    "lib": [
+      "dom",
       "dom.iterable",
       "esnext"
     ],
-    // "baseUrl": ".",
-    // "paths": {
-    //     "@project/app/modules/*": [
-    //         "src/modules/*"
-    //     ],
-    //     "@project/server/data/*": [
-    //         "server/src/json/*"
-    //     ]
-    // },
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -29,19 +20,26 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "@common": ["framework/common"],
-      "@common/*": ["framework/common/*"],
-      "@framework": ["framework/shopify"],
-      "@framework/*": ["framework/shopify/*"],
-
+      "@common": [
+        "framework/common"
+      ],
+      "@common/*": [
+        "framework/common/*"
+      ],
+      "@framework": [
+        "framework/shopify"
+      ],
+      "@framework/*": [
+        "framework/shopify/*"
+      ]
     }
   },
-  "include": [ // compile all folders and subfolders
+  "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": [ // don't compile node_modules
+  "exclude": [
     "node_modules"
   ]
 }
