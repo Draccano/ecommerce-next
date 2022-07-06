@@ -23,4 +23,4 @@ export default function Home({ products }: InferGetStaticPropsType<typeof getSta
   return <div>{JSON.stringify(products)}</div>;
 }
 
-Home.layout = Layout
+Home.Layout = Layout

@@ -1,5 +1,6 @@
 
 import { FC } from "react";
+import style from "./Layout.module.css";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -7,7 +8,7 @@ interface LayoutProps {
  
 
 const Layout: FC<LayoutProps> = ({ children }) => {
-  return <div className='layout'>{children}</div>;
+return <><main className={style.root}>{children}</main></>;
 };
 
 export default Layout
