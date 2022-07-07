@@ -8,6 +8,7 @@ module.exports = {
 // for testing purposes
 // module.exports = {
 //   plugins: [
-//     require("tailwindcss")
+//     require("tailwindcss"),
+//     require('autoprefixer')
 //   ]
 // };
