@@ -1,9 +1,5 @@
 .root {
-  @apply grid gap-2 grid-cols-1;
-
-  @screen lg {
-    @apply grid-cols-3 grid-rows-2;
-  }
+  @apply grid gap-2 grid-cols-1 lg:grid-cols-3 lg:grid-rows-2;
 
   & > * {
     @apply row-span-2 overflow-hidden;
