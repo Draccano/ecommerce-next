@@ -20,7 +20,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
           <span>14 $</span>
           {product.images && (
             <Image
-              src={placerholderImage}
+              src={product.images[0].url ?? placerholderImage}
               alt={product.name ?? 'Product image'}
               width={540}
               height={540}
