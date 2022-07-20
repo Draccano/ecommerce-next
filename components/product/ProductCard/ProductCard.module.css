@@ -1,0 +1,24 @@
+.root {
+  @apply relative;
+}
+
+.productTag {
+  @apply absolute top-0 left-0 z-20;
+
+  & > * {
+    @apply tracking-wide text-[2rem];
+  }
+}
+
+.productTitle {
+  @apply font-bold leading-8;
+
+  & span {
+    @apply px-6 py-4;
+    box-decoration-break: clone;
+  }
+}
+
+.productPrice {
+  @apply px-6 pt-2 pb-4 text-semibold text-sm leading-7;
+}

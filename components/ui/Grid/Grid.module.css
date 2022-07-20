@@ -1,14 +1,18 @@
 .root {
-  @apply grid gap-2 grid-cols-1 lg:grid-cols-3 lg:grid-rows-2;
+  @apply grid gap-0 grid-cols-1 lg:grid-cols-3 lg:grid-rows-2;
 
   & > * {
-    @apply row-span-2 overflow-hidden;
-    height: 500px;
-    max-height: 800px;
-
-    @screen lg {
-      /* inherit height from the child element */
-      height: inherit;
-    }
+    @apply h-[500px] max-h-[800px] overflow-hidden lg:h-[inherit] lg:max-h-full;
   }
+}
+
+.layoutA {
+  & > *:nth-child(6n + 1),
+  & > *:nth-child(6n + 5) {
+    @apply lg:col-span-2 row-span-2;
+  }
+}
+
+.layoutB {
+  color: blue;
 }
