@@ -20,7 +20,8 @@ export async function getStaticProps() { // renders in the server, not visible r
  
 
 export default function Home({ products }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <div className="root">{JSON.stringify(products)}</div>;
+  return <div className="root">{
+  JSON.stringify(products)}</div>;
 }
 
 Home.Layout = Layout
