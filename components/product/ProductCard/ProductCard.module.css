@@ -1,5 +1,17 @@
 .root {
   @apply relative;
+
+  &:nth-child(6n + 1) .productBg {
+    @apply bg-violet;
+  }
+  &:nth-child(6n + 3) .productBg {
+    @apply bg-pink;
+  }
+}
+
+.productBg {
+  @apply absolute inset-0 z-0;
+  background-color: #212529;
 }
 
 .productTag {
@@ -20,5 +32,5 @@
 }
 
 .productPrice {
-  @apply px-6 pt-2 pb-4 text-semibold text-sm leading-7;
+  @apply px-6 pt-2 pb-4 font-semibold text-sm leading-7;
 }
