@@ -1,3 +1,4 @@
+import { Container } from '@components/ui'
 import Link from 'next/link'
 import { FC } from 'react'
 import style from './Hero.module.css'
@@ -10,15 +11,18 @@ interface Props {
 const Hero: FC<Props> = ({ headline, description }) => {
   return (
     <div className="bg-black">
-      <div className={style.root}>
-        <h2 className={style.headline}>{headline}</h2>
-        <div>
-          <p className={style.description}>{description}</p>
-          <Link href="/">
-            <a className={style.link}>Read it here</a>
-          </Link>
+      {/* <Container el={`div` as any}> */}
+      <Container>
+        <div className={style.root}>
+          <h2 className={style.headline}>{headline}</h2>
+          <div className="flex-1 max-w-4xl">
+            <p className={style.description}>{description}</p>
+            <Link href="/">
+              <a className={style.link}>Read it here</a>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }
