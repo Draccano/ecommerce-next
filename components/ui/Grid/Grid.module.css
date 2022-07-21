@@ -1,5 +1,5 @@
 .root {
-  @apply grid gap-2 grid-cols-1 lg:grid-cols-3 lg:grid-rows-2;
+  @apply grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2;
 
   & > * {
     @apply max-h-[800px] overflow-hidden lg:h-[inherit];
