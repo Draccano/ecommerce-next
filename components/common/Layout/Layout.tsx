@@ -1,4 +1,4 @@
-import { Footer } from '@components/common'
+import { Footer, Navbar } from '@components/common'
 import { FC } from 'react'
 import style from './Layout.module.css'
 
@@ -9,6 +9,7 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className={style.root}>
+      <Navbar />
       <main className="fit">{children}</main>
       <Footer />
     </div>
